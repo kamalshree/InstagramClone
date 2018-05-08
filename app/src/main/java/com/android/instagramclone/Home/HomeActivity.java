@@ -3,12 +3,15 @@ package com.android.instagramclone.Home;
 import android.content.Context;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import android.widget.TableLayout;
+
 
 import com.android.instagramclone.R;
 import com.android.instagramclone.Utils.BottomNavigationHelper;
@@ -27,6 +30,7 @@ public class HomeActivity extends AppCompatActivity {
         activity_number=getIntent().getIntExtra("activity_number",activity_number);
         setupBottomNavigationView();
         setupViewPager();
+
     }
 
     /**
@@ -41,6 +45,7 @@ public class HomeActivity extends AppCompatActivity {
         MenuItem menuItem=menu.getItem(activity_number);
         menuItem.setChecked(true);
     }
+
 
     /**
      * Top Tabs in Home Fragment
@@ -61,4 +66,5 @@ public class HomeActivity extends AppCompatActivity {
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_logo);
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_arrow);
     }
+
 }
